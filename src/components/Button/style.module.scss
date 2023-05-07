@@ -1,0 +1,35 @@
+@import "../../styles/variables/index.module.scss";
+
+.base {
+    padding: 12px;
+    border-radius: 8px;
+    border-width: 4px;
+    border-style: solid;
+    cursor: pointer;
+}
+
+@mixin applyColors($color){
+    background-color: $color;
+    border-color: $color;
+    color: $color;
+}
+
+.positive {
+    @include applyColors($color_positive);
+}
+
+.neutral {
+    @include applyColors($color_primary);
+}
+
+.negative {
+    @include applyColors($color_negative);
+}
+
+.primary {
+    color: $color_secondary;
+}
+
+.secondary {
+    background-color: $color_secondary;
+}
