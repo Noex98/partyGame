@@ -1,4 +1,13 @@
 .background {
-    background: -webkit-linear-gradient(90deg,#ffd7c7,#ffd3ff,#ffffff); /* Chrome 10-25, Safari 5.1-6 */ 
-    background: linear-gradient(90deg,#ffd7c7,#ffd3ff,#ffffff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: hsl(223, 31%, 13%);
+    background-image: conic-gradient(
+        from 0deg at 50% 50%,
+        blue,
+        purple,
+        purple,
+        blue
+    );
+    background-blend-mode: multiply;
+    color: white;
+    min-block-size: 100vh;
 }

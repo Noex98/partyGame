@@ -19,7 +19,7 @@
 }
 
 .neutral {
-    @include applyColors($color_primary);
+    @include applyColors($color_teal);
 }
 
 .negative {
@@ -27,9 +27,9 @@
 }
 
 .primary {
-    color: $color_secondary;
+    color: $color_white;
 }
 
 .secondary {
-    background-color: $color_secondary;
+    background-color: $color_white;
 }

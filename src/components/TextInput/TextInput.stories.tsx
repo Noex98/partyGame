@@ -10,7 +10,7 @@ const meta: Meta<typeof TextInput> = {
 export default meta;
 type Story = StoryObj<typeof TextInput>;
 
-export const SingleTextInput: Story = {
+export const Primary: Story = {
   args: {
     label: "Name"
   },
