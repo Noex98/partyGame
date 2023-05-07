@@ -3,7 +3,10 @@ const nextConfig = {
   reactStrictMode: true,
   sassOptions: {
     modules: true
-  }
+  },
+  experimental: {
+    appDir: true,
+  },
 }
 
 module.exports = nextConfig

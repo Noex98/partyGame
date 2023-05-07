@@ -8,11 +8,11 @@ interface Props extends Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, 'cla
 }
 
 export const Button = ({
-    text = "", 
-    color = "neutral", 
-    variation = "primary", 
+    text = "",
+    color = "neutral",
+    variation = "primary",
     ...props
-  }: Props)  => {
+  }: Props ) => {
 
   return (
     <button

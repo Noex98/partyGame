@@ -1,7 +1,13 @@
+import Link from 'next/link'
 import React from 'react'
+import styles from './style.module.scss';
 
 export const Header = () => {
   return (
-    <div>Header</div>
+    <header className={styles.container}>
+        <Link href="/">
+            DrukSpil
+        </Link>
+    </header>
   )
 }
