@@ -7,7 +7,12 @@ import { IoMdAddCircle } from 'react-icons/io'
 import { AiOutlineArrowRight } from 'react-icons/ai'
 import { usePlayerContext } from '@/Utils/PlayerContext';
 
-export const AddPlayerBtn = () => {
+type Props = {
+    focusHandler?: () => void,
+    blurHandler?: () => void
+}
+
+export const AddPlayerBtn = ({focusHandler, blurHandler}: Props) => {
 
     const playerContext = usePlayerContext()
     const [inputValue, setInputValue] = useState("")
@@ -26,7 +31,14 @@ export const AddPlayerBtn = () => {
     }
 
     return (
-        <div className={styles.inputWrapper}>
+        <div 
+            className={styles.inputWrapper}
+            onFocus={() => !!focusHandler && focusHandler()}
+            onBlur={() => {
+                setInputValue("")
+                !!blurHandler && blurHandler();
+            }}
+        >
             <input 
                 ref={inputRef}
                 className={styles.input} placeholder='Add player' 
