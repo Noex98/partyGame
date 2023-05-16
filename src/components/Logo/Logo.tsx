@@ -1,12 +1,14 @@
 import React from 'react';
-import style from './style.module.scss';
+import Image from 'next/image';
+import LogoSvg from './logo.svg'
 
 interface Props {
-    size?: "small" | "medium" | "large"
+    height?: number,
+    width?: number
 }
 
-export const Logo = ({size = "medium"}: Props ) => {
+export const Logo = ({width = 250, height = 60}: Props ) => {
     return (
-        <div className={style.logoText + " " + style[size]}>Drinkr</div>
+        <Image src={LogoSvg} alt="logo" width={width} height={height}/>
     )
 }

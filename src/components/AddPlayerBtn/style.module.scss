@@ -1,0 +1,43 @@
+@import "../../styles/variables/index.module.scss";
+
+.input {
+    padding: 12px;
+    border: none;
+    display:block;
+    width:100%;
+    border-radius: 8px;
+    background-color: $color_blue_2;
+    color: $color_text_light;
+    cursor: pointer;
+    transition: 150ms;
+
+    &::placeholder {
+        color: $color_text_light;
+        text-align: center;
+        transition:150ms;
+    }
+
+    &:focus {
+        border-radius: 0;
+
+        &::placeholder {
+            color: transparent;
+        }
+    }
+}
+
+.inputWrapper {
+    position:relative;
+}
+
+.iconsContainer {
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    transform: translateY(-50%);
+}
+
+.highlighted {
+    background-color: $color_blue_4;
+    
+}

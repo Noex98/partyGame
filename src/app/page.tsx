@@ -1,4 +1,6 @@
+import { Logo } from '@/components';
 import React from 'react'
+import { Button, AddPlayerBtn } from '@/components';
 import BackgroundPotrait from '@/components/BackgroundPotrait/BackgroundPotrait';
 
 export const metadata = {
@@ -8,8 +10,14 @@ export const metadata = {
 
 export default function page() {
   return (
-    <BackgroundPotrait>
-    </BackgroundPotrait>
+    <div>
+        <Logo/>
+        
+        <AddPlayerBtn />
+        <Button text='Settings'/>
+        <Button text='Start'/>
+
+    </div>
   )
 }
 
