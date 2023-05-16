@@ -11,23 +11,10 @@ const meta: Meta<typeof Button> = {
 export default meta;
 type Story = StoryObj<typeof Button>;
 
-export const SingleButton: Story = {
+export const Primary: Story = {
   args: {
     text: "Click me!",
-    color: "neutral",
-    variation: "primary"
+    disabled: false,
+    highlighted: false,
   },
 };
-
-export const AllButtons: Story = {
-  render: () => (
-    <div style={{display:"flex", gap:12,}}>
-      <Button text='Click me!' color='positive' variation='primary'/>
-      <Button text='Click me!' color='negative' variation='primary'/>
-      <Button text='Click me!' color='neutral' variation='primary'/>
-      <Button text='Click me!' color='positive' variation='secondary'/>
-      <Button text='Click me!' color='negative' variation='secondary'/>
-      <Button text='Click me!' color='neutral' variation='secondary'/>
-    </div>
-  )
-}

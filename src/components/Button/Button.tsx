@@ -3,20 +3,18 @@ import styles from './style.module.scss';
 
 interface Props extends Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, 'className'> {
     text?: string;
-    color?: "positive" | "negative" | "neutral";
-    variation?: "primary" | "secondary";
+    highlighted: boolean;
 }
 
 export const Button = ({
     text = "",
-    color = "neutral",
-    variation = "primary",
+    highlighted = false,
     ...props
   }: Props ) => {
 
   return (
     <button
-        className={styles.base + " " + styles[color] + " " + styles[variation]}
+        className={styles.base + " " + (highlighted && styles.highlighted)}
         {...props}
     >
         {text}

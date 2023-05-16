@@ -2,34 +2,19 @@
 
 .base {
     padding: 12px;
+    border: none;
+    display:block;
+    width:100%;
     border-radius: 8px;
-    border-width: 4px;
-    border-style: solid;
+    background-color: $color_blue_2;
+    color: $color_text_light;
     cursor: pointer;
+
+    &:disabled {
+        opacity: .7;
+    }
 }
 
-@mixin applyColors($color){
-    background-color: $color;
-    border-color: $color;
-    color: $color;
-}
-
-.positive {
-    @include applyColors($color_positive);
-}
-
-.neutral {
-    @include applyColors($color_teal);
-}
-
-.negative {
-    @include applyColors($color_negative);
-}
-
-.primary {
-    color: $color_white;
-}
-
-.secondary {
-    background-color: $color_white;
+.highlighted {
+    background-color: $color_blue_3;
 }
