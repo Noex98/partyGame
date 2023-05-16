@@ -1,5 +1,8 @@
+"use client";
+
 import { Logo } from '@/components';
-import React from 'react'
+import styles from './style.module.scss';
+import React, { useState } from 'react'
 import { Button, AddPlayerBtn } from '@/components';
 
 export const metadata = {
@@ -8,15 +11,27 @@ export const metadata = {
 };
 
 export default function page() {
-  return (
-    <div>
-        <Logo/>
-        
-        <AddPlayerBtn />
-        <Button text='Settings'/>
-        <Button text='Start'/>
 
-    </div>
-  )
+    const [addPlayerFocus, setAddPlayerFocus] = useState(false);
+
+    return (
+        <div>
+            <Logo/>
+            
+            <div className={styles.buttonContainer + " " + ( !addPlayerFocus && styles.buttonContainerPadding)}>
+                <AddPlayerBtn 
+                    focusHandler={() => setAddPlayerFocus(true)}
+                    blurHandler={() => setAddPlayerFocus(false)}
+                />
+                {!addPlayerFocus && (
+                    <>
+                        <Button text='Settings'/>
+                        <Button text='Start'/>
+                    </>
+                )}
+            </div>
+
+        </div>
+    )
 }
 
