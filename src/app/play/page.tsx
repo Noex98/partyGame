@@ -5,9 +5,9 @@ export default function page() {
 
     const playerContext = usePlayerContext();
 
-    if(!playerContext) return null;
+    if (!playerContext) return null;
 
-    const {players, setPlayers} = playerContext;
+    const { players, setPlayers } = playerContext;
 
     console.log(players);
 

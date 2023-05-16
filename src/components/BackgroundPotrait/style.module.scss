@@ -1,0 +1,17 @@
+@import "../../styles/variables/index.module.scss";
+
+.background {
+  background-color: $color_blue_1;
+  min-height: 100vh;
+  min-width: 100%;
+  .backgroundUpper {
+    position: relative;
+    background-color: $color_blue_2;
+    height: 40vh;
+    width: 100%;
+    svg {
+      position: absolute;
+      bottom: -1px;
+    }
+  }
+}
