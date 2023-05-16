@@ -3,7 +3,7 @@ import styles from './style.module.scss';
 
 interface Props extends Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, 'className'> {
     text?: string;
-    highlighted: boolean;
+    highlighted?: boolean;
 }
 
 export const Button = ({
