@@ -12,6 +12,7 @@ type Story = StoryObj<typeof Logo>;
 
 export const Primary: Story = {
   args: {
-    size: "medium"
+    height:90,
+    width:250,
   },
 };
