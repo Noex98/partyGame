@@ -1,13 +1,7 @@
+@import "../styles/variables/index.module.scss";
+
 .background {
-    background: hsl(223, 31%, 13%);
-    background-image: conic-gradient(
-        from 0deg at 50% 50%,
-        blue,
-        purple,
-        purple,
-        blue
-    );
-    background-blend-mode: multiply;
+    background-color: $color_blue_1;
     color: white;
     min-block-size: 100vh;
 }
