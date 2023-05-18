@@ -1,0 +1,7 @@
+@import "../styles/variables/index.module.scss";
+
+.background {
+    background-color: $color_blue_1;
+    color: white;
+    min-block-size: 100vh;
+}
