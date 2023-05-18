@@ -1,8 +1,9 @@
 @import "../../styles/variables/index.module.scss";
 
 .background {
+  position: absolute;
   background-color: $color_blue_1;
-  min-height: 100vh;
+  max-height: 100vh;
   min-width: 100%;
   .backgroundUpper {
     position: relative;
@@ -12,6 +13,12 @@
     svg {
       position: absolute;
       bottom: -1px;
+    }
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
   }
 }

@@ -1,14 +1,12 @@
 "use client";
-
-import { Logo } from '@/components';
 import styles from './style.module.scss';
 import React, { useState } from 'react'
 import { Button, AddPlayerBtn } from '@/components';
 import BackgroundPotrait from '@/components/BackgroundPotrait/BackgroundPotrait';
 
 export const metadata = {
-  title: 'Home',
-  description: 'idk man',
+    title: 'Home',
+    description: 'idk man',
 };
 
 export default function page() {
@@ -17,21 +15,19 @@ export default function page() {
 
     return (
         <div>
-            <Logo/>
-            
-            <div className={styles.buttonContainer + " " + ( !addPlayerFocus && styles.buttonContainerPadding)}>
-                <AddPlayerBtn 
+            <BackgroundPotrait />
+            <div className={styles.buttonContainer + " " + (!addPlayerFocus && styles.buttonContainerPadding)}>
+                <AddPlayerBtn
                     focusHandler={() => setAddPlayerFocus(true)}
                     blurHandler={() => setAddPlayerFocus(false)}
                 />
                 {!addPlayerFocus && (
                     <>
-                        <Button text='Settings'/>
-                        <Button text='Start'/>
+                        <Button text='Settings' />
+                        <Button text='Start' />
                     </>
                 )}
             </div>
-
         </div>
     )
 }

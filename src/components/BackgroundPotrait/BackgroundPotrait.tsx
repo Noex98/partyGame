@@ -1,22 +1,24 @@
 import React from 'react'
 import styles from './style.module.scss';
-import { Logo } from '../Logo/Logo'
+import { Logo } from '@/components';
+
 
 
 interface Props {
-    children: React.ReactNode;
+  children: React.ReactNode;
 }
 
 const BackgroundPotrait = ({ children }: Props) => {
-    return (
-        <div className={styles.background}>
+  return (
+    <div className={styles.background}>
 
-            <div className={styles.waves}>
-                <div className={styles.backgroundUpper}>
-                    <svg width="100%" fill="#2F2059">
-                        <path
-                            fill="#2F2059"
-                            d="
+      <div className={styles.waves}>
+        <div className={styles.backgroundUpper}>
+          <Logo />
+          <svg width="100%" fill="#2F2059">
+            <path
+              fill="#2F2059"
+              d="
           M0 67
           C 273,183
             822,-40
@@ -26,12 +28,12 @@ const BackgroundPotrait = ({ children }: Props) => {
           H 0 
           V 67
           Z">
-                            <animate
-                                repeatCount="indefinite"
-                                fill="#2F2059"
-                                attributeName="d"
-                                dur="10s"
-                                values="
+              <animate
+                repeatCount="indefinite"
+                fill="#2F2059"
+                attributeName="d"
+                dur="10s"
+                values="
             M0 77 
             C 473,283
               822,-40
@@ -72,14 +74,14 @@ const BackgroundPotrait = ({ children }: Props) => {
             V 67 
             Z
             ">
-                            </animate>
-                        </path>
-                    </svg>
-                </div>
-
-            </div>
+              </animate>
+            </path>
+          </svg>
         </div>
-    )
+
+      </div>
+    </div>
+  )
 }
 
 export default BackgroundPotrait
