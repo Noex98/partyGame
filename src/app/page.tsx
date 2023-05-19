@@ -1,8 +1,11 @@
 "use client";
 import styles from './style.module.scss';
 import React, { useState } from 'react'
-import { Button, AddPlayerBtn } from '@/components';
-import BackgroundPotrait from '@/components/BackgroundPotrait/BackgroundPotrait';
+import { 
+    Button,
+    AddPlayerBtn,
+    BackgroundPotrait
+} from '@/components';
 
 export const metadata = {
     title: 'Home',

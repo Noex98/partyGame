@@ -5,10 +5,10 @@ import { Logo } from '@/components';
 
 
 interface Props {
-  children: React.ReactNode;
+  children?: React.ReactNode;
 }
 
-const BackgroundPotrait = ({ children }: Props) => {
+export const BackgroundPotrait = ({ children }: Props) => {
   return (
     <div className={styles.background}>
 
@@ -83,5 +83,3 @@ const BackgroundPotrait = ({ children }: Props) => {
     </div>
   )
 }
-
-export default BackgroundPotrait
