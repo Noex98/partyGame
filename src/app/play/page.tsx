@@ -1,5 +1,6 @@
 "use client";
 import { usePlayerContext } from '@/Utils/PlayerContext'
+import { ForceOrientation } from '@/components';
 import React from 'react'
 
 export default function page() {
@@ -13,6 +14,9 @@ export default function page() {
     console.log(players);
 
     return (
-        <div>page</div>
+        <ForceOrientation orientation='landscape'>
+
+            <div>Play</div>
+        </ForceOrientation>
     )
 }
