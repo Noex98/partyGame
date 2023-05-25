@@ -50,7 +50,7 @@ export const AddPlayerBtn = ({focusHandler, blurHandler}: Props) => {
                 <button onClick={e => addHandler()}>
                     <IoMdAddCircle size={30}/>
                 </button>
-                <Link href="/game">
+                <Link href="/play">
                     <AiOutlineArrowRight size={30}/>
                 </Link>
             </span>

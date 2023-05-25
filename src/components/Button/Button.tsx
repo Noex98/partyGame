@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './style.module.scss';
 
-interface Props extends Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, 'className'> {
+export interface Props extends Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, 'className'> {
     text?: string;
     highlighted?: boolean;
 }

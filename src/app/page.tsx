@@ -2,11 +2,11 @@
 import styles from './style.module.scss';
 import React, { useState } from 'react'
 import { 
-    Button,
     AddPlayerBtn,
     BackgroundPotrait,
     PlayerDisplay
 } from '@/components';
+import { ButtonLink } from '@/components/ButtonLink';
 
 export const metadata = {
     title: 'Home',
@@ -31,8 +31,8 @@ export default function page() {
                     />
                     {!addPlayerFocus && (
                         <>
-                            <Button text='Settings' />
-                            <Button text='Start' />
+                            <ButtonLink href={'/settings'} text='Settings' />
+                            <ButtonLink href={'/play'} text='Start' />
                         </>
                     )}
                 </div>

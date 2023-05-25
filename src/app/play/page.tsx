@@ -1,3 +1,4 @@
+"use client";
 import { usePlayerContext } from '@/Utils/PlayerContext'
 import React from 'react'
 
