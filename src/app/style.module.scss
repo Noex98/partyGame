@@ -1,12 +1,22 @@
-.buttonContainer {
-  height: 100vh;
+.contentWrapper{
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  gap: 16px;
-  transition: 150ms;
+  height: 100vh;
 }
 
-.buttonContainerPadding {
-  padding: 16px;
+.playerDisplayWrapper{
+  padding: 0 16px;
+}
+
+.buttonContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: 150ms;
+  padding:16px;
+}
+
+.buttonContainerActive {
+  padding: 16px 0 0 0;
 }

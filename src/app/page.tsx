@@ -4,7 +4,8 @@ import React, { useState } from 'react'
 import { 
     Button,
     AddPlayerBtn,
-    BackgroundPotrait
+    BackgroundPotrait,
+    PlayerDisplay
 } from '@/components';
 
 export const metadata = {
@@ -19,17 +20,22 @@ export default function page() {
     return (
         <div>
             <BackgroundPotrait />
-            <div className={styles.buttonContainer + " " + (!addPlayerFocus && styles.buttonContainerPadding)}>
-                <AddPlayerBtn
-                    focusHandler={() => setAddPlayerFocus(true)}
-                    blurHandler={() => setAddPlayerFocus(false)}
-                />
-                {!addPlayerFocus && (
-                    <>
-                        <Button text='Settings' />
-                        <Button text='Start' />
-                    </>
-                )}
+            <div className={styles.contentWrapper}>
+                <div className={styles.playerDisplayWrapper}>
+                    <PlayerDisplay />
+                </div>
+                <div className={styles.buttonContainer + " " + (addPlayerFocus && styles.buttonContainerActive)}>
+                    <AddPlayerBtn
+                        focusHandler={() => setAddPlayerFocus(true)}
+                        blurHandler={() => setAddPlayerFocus(false)}
+                    />
+                    {!addPlayerFocus && (
+                        <>
+                            <Button text='Settings' />
+                            <Button text='Start' />
+                        </>
+                    )}
+                </div>
             </div>
         </div>
     )

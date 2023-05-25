@@ -1,0 +1,17 @@
+@import "../../styles/variables/index.module.scss";
+
+.container {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap-reverse;
+
+    > span {
+        padding:6px;
+        border-radius: 8px;
+        background-color: $color_blue_2;
+        
+        display:flex;
+        gap: 14px;
+        align-items: center;
+    }
+}

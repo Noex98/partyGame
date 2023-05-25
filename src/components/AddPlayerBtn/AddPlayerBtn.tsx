@@ -21,9 +21,9 @@ export const AddPlayerBtn = ({focusHandler, blurHandler}: Props) => {
     if(!playerContext) return null;
 
     const addHandler = () => {
-        if(!!inputValue.length){
+        if(inputValue.length){
             playerContext.setPlayers(prev => [...prev, inputValue]);
-            setInputValue("")
+            setInputValue("");
         }
         if(inputRef.current){
             inputRef.current.focus()
@@ -35,7 +35,7 @@ export const AddPlayerBtn = ({focusHandler, blurHandler}: Props) => {
             className={styles.inputWrapper}
             onFocus={() => !!focusHandler && focusHandler()}
             onBlur={() => {
-                setInputValue("")
+                //setInputValue("")
                 !!blurHandler && blurHandler();
             }}
         >
